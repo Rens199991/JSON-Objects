@@ -1,4 +1,7 @@
-$Path = "Registry::HKU\.DEFAULT\Control Panel\Keyboard"
+#Define drive HKU:
+New-PSDrive -PSProvider Registry -Name HKU -Root HKEY_USERS
+
+$Path = "HKU:\.DEFAULT\Control Panel\Keyboard"
 $Name = "InitialKeyboardIndicators"
 $Value = 2
 $Registry = Get-ItemProperty -Path $Path -Name $Name -ErrorAction Stop | Select-Object -ExpandProperty $Name

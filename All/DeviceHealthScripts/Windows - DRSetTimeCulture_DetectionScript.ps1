@@ -1,7 +1,8 @@
 #Heel Belangrijk dat je het script runt met de logged-on credentials!!!
 $Culture = Get-culture
+$Culture
 
-If ($Culture.Name -eq "don't exist")
+If ($Culture.Name -eq "nl-BE")
     {
     #Create a tag file just so Intune knows this was installed
     If (-not(Test-Path -Path "$($env:ProgramData)\CXN\Scripts\SetTimeCultureDRNOT"))

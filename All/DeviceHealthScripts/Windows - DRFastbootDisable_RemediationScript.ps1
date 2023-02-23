@@ -1,8 +1,8 @@
 #Create a tag file just so Intune knows this was installed
-If(-not(Test-Path -Path "$($env:ProgramData)\CXN\Scripts\FastbootDisableRemediationR"))
+If(-not(Test-Path -Path "$($env:ProgramData)\CXN\Scripts\DisableFastbootRemediationR"))
     {
-    New-Item -itemtype "directory" -path "$($env:ProgramData)\CXN\Scripts\FastbootDisableR"
-    Set-Content -Path "$($env:ProgramData)\CXN\Scripts\FastbootDisableR\FastbootDisableR.ps1.tag" -Value "Installed"
+    New-Item -itemtype "directory" -path "$($env:ProgramData)\CXN\Scripts\DisableFastbootR"
+    Set-Content -Path "$($env:ProgramData)\CXN\Scripts\DisableFastbootR\DisableFastbootR.ps1.tag" -Value "Installed"
     }
 
 #Begin Script
